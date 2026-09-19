@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Record — D.A.D. Internal</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0c0c'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%23c9cbc7' text-anchor='middle'%3ED%3C/text%3E%3Crect x='24' y='24' width='6' height='6' fill='%238a2323'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+
+<div id="login-gate">
+  <div class="login-wrap">
+    <div class="login-box">
+      <h1>ARCHIVE MANAGEMENT</h1>
+      <p>D.A.D. INTERNAL SYSTEM — AUTHORIZED PERSONNEL ONLY</p>
+      <form id="login-form">
+        <input type="password" id="login-pass" placeholder="ACCESS CODE" autocomplete="off">
+        <div class="login-error" id="login-error"></div>
+        <button class="btn btn-primary" type="submit" style="width:100%;">AUTHENTICATE</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="admin-root" style="display:none;">
+  <div class="admin-topbar">
+    <span class="tag">INTERNAL</span>
+    <span class="title">D.A.D. ARCHIVE MANAGEMENT</span>
+    <span class="path" id="form-title">/ record</span>
+    <span class="spacer"></span>
+    <a class="btn" href="/admin/index.html">&larr; ALL RECORDS</a>
+    <button data-action="logout">LOG OUT</button>
+  </div>
+
+  <div class="admin-shell">
+    <form id="edit-form">
+      <div class="admin-panel">
+        <div class="admin-panel-header"><span>Record Details</span></div>
+        <div class="admin-panel-body admin-form">
+          <div class="field"><label>Record ID</label><input type="text" id="f-id" placeholder="e.g. 1165"></div>
+          <div class="field"><label>Title</label><input type="text" id="f-title"></div>
+          <div class="field"><label>Subject</label><input type="text" id="f-subject"></div>
+          <div class="field"><label>Operator</label><input type="text" id="f-operator"></div>
+
+          <div class="field">
+            <label>Classification</label>
+            <select id="f-classification">
+              <option>UNCLASSIFIED</option>
+              <option>RESTRICTED</option>
+              <option>CLASSIFIED</option>
+              <option>ADMIN ONLY</option>
+              <option>UNLOGGED</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Status</label>
+            <select id="f-status">
+              <option>ACTIVE</option>
+              <option>ARCHIVED</option>
+              <option>CORRUPTED</option>
+              <option>REDACTED</option>
+              <option>ACCESS DENIED</option>
+              <option>UNOFFICIAL</option>
+            </select>
+          </div>
+
+          <div class="field"><label>Date Logged</label><input type="date" id="f-date-logged"></div>
+          <div class="field"><label>Date Recorded</label><input type="date" id="f-date-recorded"></div>
+
+          <div class="field full"><label>Tags (comma separated)</label><input type="text" id="f-tags"></div>
+          <div class="field full"><label>Summary</label><textarea id="f-summary"></textarea></div>
+          <div class="field full">
+            <label>Body (one paragraph per line)</label>
+            <textarea id="f-body" style="min-height:140px;"></textarea>
+          </div>
+          <div class="field full">
+            <label>Metadata Fields (one per line, "LABEL: value")</label>
+            <textarea id="f-fields"></textarea>
+            <div class="hint">Example: DELIVERY METHOD: [REDACTED]</div>
+          </div>
+          <div class="field full">
+            <label>Access Log (one per line, "date | user | action")</label>
+            <textarea id="f-access-log"></textarea>
+            <div class="hint">Example: 2024-11-03 08:15 | OPERATOR_04 | VIEWED</div>
+          </div>
+          <div class="field full field-checkbox">
+            <input type="checkbox" id="f-hidden">
+            <label style="margin:0;">Hidden from public archive index</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" type="submit">SAVE RECORD</button>
+        <a class="btn" href="/admin/index.html">CANCEL</a>
+      </div>
+    </form>
+
+    <div class="admin-panel" style="margin-top:20px;">
+      <div class="admin-panel-header"><span>Linked Media (Video)</span></div>
+      <div class="admin-panel-body">
+        <div class="media-current" id="media-current">—</div>
+        <div class="admin-form" style="margin-top:14px;">
+          <div class="field"><label>Media Caption</label><input type="text" id="f-media-caption"></div>
+          <div class="field"><label>Replace Video File</label><input type="file" id="f-media-file" accept="video/*"></div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-primary" type="button" id="btn-upload-media">UPLOAD / REPLACE MEDIA</button>
+          <button class="btn btn-danger" type="button" id="btn-remove-media">REMOVE MEDIA</button>
+        </div>
+        <p class="notice">Video files are stored in this browser's IndexedDB and linked to the record ID. Save the record before uploading.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/store.js"></script>
+<script src="/admin/admin.js"></script>
+<script>
+  DADAdmin.initLogin();
+  document.addEventListener("dad-admin-ready", function () { DADAdmin.initEdit(); });
+  if (document.getElementById("admin-root").style.display !== "none") {
+    DADAdmin.initEdit();
+  }
+</script>
+</body>
+</html>
