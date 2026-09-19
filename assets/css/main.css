@@ -92,14 +92,17 @@ a:hover { color: #fff; }
 
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .brand-mark {
-  width: 34px; height: 34px;
+  min-width: 34px; height: 34px;
+  padding: 0 5px;
   border: 1px solid var(--border-soft);
   display: flex; align-items: center; justify-content: center;
   font-weight: 600;
+  font-size: 11px;
   color: var(--text);
   background: var(--panel);
-  letter-spacing: 0.5px;
+  letter-spacing: 0;
   position: relative;
+  white-space: nowrap;
 }
 .brand-mark::after {
   content: "";
