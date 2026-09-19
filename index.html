@@ -12,16 +12,29 @@
 <body>
 <main>
   <div class="landing">
-    <div class="landing-mark">DAD</div>
+    <div class="landing-mark">D.A.D.</div>
     <div class="landing-title">DIGITAL ARCHIVE DEPARTMENT</div>
     <div class="landing-boot" id="boot-text"></div>
-    <a class="landing-enter" id="enter-link" href="/archive.html">ENTER ARCHIVE</a>
+
+    <form class="clearance-form" id="clearance-form" style="display:none;">
+      <label for="clearance-input">CLEARANCE CODE REQUIRED</label>
+      <input type="password" id="clearance-input" autocomplete="off" spellcheck="false">
+      <button type="submit" class="landing-enter ready" style="cursor:pointer;">AUTHENTICATE</button>
+      <div class="clearance-error" id="clearance-error"></div>
+    </form>
+
+    <a class="landing-enter" id="enter-link" href="/archive.html" style="display:none;">ENTER ARCHIVE</a>
+
     <div class="landing-foot">TERMINAL PUBLIC-ACCESS-04 &mdash; RETRIEVAL INTERFACE v2.3<br>UNAUTHORIZED ACCESS IS LOGGED</div>
   </div>
 </main>
 
 <script src="/assets/js/effects.js"></script>
+<script src="/assets/js/gate.js"></script>
 <script>
+  var params = new URLSearchParams(window.location.search);
+  var returnTo = params.get("return") || "/archive.html";
+
   var lines = [
     "> initializing retrieval interface...",
     "> connecting to archive index... OK",
@@ -31,9 +44,15 @@
   ];
   var bootEl = document.getElementById("boot-text");
   var enterLink = document.getElementById("enter-link");
+  var clearanceForm = document.getElementById("clearance-form");
+  var clearanceInput = document.getElementById("clearance-input");
+  var clearanceError = document.getElementById("clearance-error");
+
+  enterLink.setAttribute("href", returnTo);
+
   function typeLines(i) {
     if (i >= lines.length) {
-      enterLink.classList.add("ready");
+      revealNext();
       return;
     }
     var lineEl = document.createElement("div");
@@ -42,6 +61,30 @@
       setTimeout(function () { typeLines(i + 1); }, 180);
     });
   }
+
+  function revealNext() {
+    if (DADGate.isCleared()) {
+      enterLink.style.display = "";
+    } else {
+      clearanceForm.style.display = "flex";
+      clearanceInput.focus();
+    }
+  }
+
+  clearanceForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (DADGate.verify(clearanceInput.value)) {
+      DADGate.grant();
+      clearanceError.textContent = "";
+      clearanceForm.querySelector("label").textContent = "ACCESS GRANTED";
+      setTimeout(function () { window.location.href = returnTo; }, 500);
+    } else {
+      clearanceError.textContent = "ACCESS DENIED — INVALID CLEARANCE CODE";
+      clearanceInput.value = "";
+      clearanceInput.focus();
+    }
+  });
+
   typeLines(0);
 </script>
 </body>
