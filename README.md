@@ -7,7 +7,7 @@ An internal-looking digital archive interface, built as the front for a Minecraf
 - `index.html` — landing / boot terminal, links into the archive.
 - `archive.html` — searchable record index.
 - `record.html?id=XXXX` — record detail view (metadata, body, linked media, access log). Records with `ACCESS DENIED` status or `ADMIN ONLY` classification render a denial screen instead of contents. Records marked hidden are omitted from the index but remain reachable by direct link.
-- `admin/` — separate, unlinked archive management panel (passphrase-gated: `OVERSEER-7`) for creating/editing records, toggling visibility, and uploading or replacing linked video per record.
+- `admin/` — separate, unlinked archive management panel (passphrase-gated: `OVERSEER-7`) for creating/editing records, toggling visibility, and uploading or replacing linked video per record. Reachable directly at `/admin/index.html`, or from the archive search box by typing the hidden trigger phrase `D4WN-OVERRIDE` (searches normally otherwise; see `ADMIN_TRIGGER` in `assets/js/archive.js`).
 - `assets/css/` — public site styling; `admin/admin.css` — management panel styling.
 - `assets/js/store.js` — seed record data plus a `localStorage`/`IndexedDB`-backed data layer (no backend server).
 
