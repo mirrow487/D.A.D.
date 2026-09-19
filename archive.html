@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive — D.A.D.</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230f0f11'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%23d6d3c9' text-anchor='middle'%3ED%3C/text%3E%3Crect x='24' y='24' width='6' height='6' fill='%238a2323'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+<main>
+  <div class="shell">
+    <div class="eyebrow">Digital Archive Department</div>
+    <h1>Record Index</h1>
+    <p class="muted">Search retrievable records by ID, subject, classification, or status. Some records are restricted and will not display contents.</p>
+
+    <div class="filterbar">
+      <input type="text" id="record-search" placeholder="Search by ID, subject, title...">
+      <select id="cls-filter">
+        <option value="ALL">ALL CLASSIFICATIONS</option>
+      </select>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <span>Records</span>
+        <span class="faint" id="record-count">— / — RECORDS</span>
+      </div>
+      <div class="table-scroll">
+        <table class="records-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Subject</th>
+              <th>Classification</th>
+              <th>Status</th>
+              <th>Logged</th>
+            </tr>
+          </thead>
+          <tbody id="records-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/assets/js/effects.js"></script>
+<script src="/assets/js/store.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/archive.js"></script>
+<script>document.addEventListener("DOMContentLoaded", function(){ DADSite.mountChrome("archive"); });</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D.A.D. — Digital Archive Department</title>
+<meta name="description" content="Internal retrieval terminal for the Digital Archive Department.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230f0f11'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%23d6d3c9' text-anchor='middle'%3ED%3C/text%3E%3Crect x='24' y='24' width='6' height='6' fill='%238a2323'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/assets/css/main.css">
+<!-- staging note: /admin/ build excluded from public nav per deployment checklist -->
+</head>
+<body>
+<main>
+  <div class="landing">
+    <div class="landing-mark">DAD</div>
+    <div class="landing-title">DIGITAL ARCHIVE DEPARTMENT</div>
+    <div class="landing-boot" id="boot-text"></div>
+    <a class="landing-enter" id="enter-link" href="/archive.html">ENTER ARCHIVE</a>
+    <div class="landing-foot">TERMINAL PUBLIC-ACCESS-04 &mdash; RETRIEVAL INTERFACE v2.3<br>UNAUTHORIZED ACCESS IS LOGGED</div>
+  </div>
+</main>
+
+<script src="/assets/js/effects.js"></script>
+<script>
+  var lines = [
+    "> initializing retrieval interface...",
+    "> connecting to archive index... OK",
+    "> terminal: PUBLIC-ACCESS-04",
+    "> clearance level: UNVERIFIED",
+    "> loading record index..."
+  ];
+  var bootEl = document.getElementById("boot-text");
+  var enterLink = document.getElementById("enter-link");
+  function typeLines(i) {
+    if (i >= lines.length) {
+      enterLink.classList.add("ready");
+      return;
+    }
+    var lineEl = document.createElement("div");
+    bootEl.appendChild(lineEl);
+    DADEffects.typeInto(lineEl, lines[i], 14, function () {
+      setTimeout(function () { typeLines(i + 1); }, 180);
+    });
+  }
+  typeLines(0);
+</script>
+</body>
+</html>
