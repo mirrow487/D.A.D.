@@ -7,14 +7,14 @@ An internal-looking digital archive interface, built as the front for a Minecraf
 - `index.html` — landing / boot terminal. Also the public site's clearance-code gate (see below).
 - `archive.html` — searchable record index.
 - `record.html?id=XXXX` — record detail view (metadata, body, linked media, access log). Records with `ACCESS DENIED` status or `ADMIN ONLY` classification render a denial screen instead of contents. Records marked hidden are omitted from the index but remain reachable by direct link.
-- `admin/` — separate, unlinked archive management panel (passphrase-gated: `OVERSEER-7`) for creating/editing records, toggling visibility, and uploading or replacing linked video per record.
+- `admin/` — separate, unlinked archive management panel (passphrase-gated: `*******`) for creating/editing records, toggling visibility, and uploading or replacing linked video per record.
 - `assets/css/` — public site styling; `admin/admin.css` — management panel styling.
 - `assets/js/store.js` — seed record data plus a `localStorage`/`IndexedDB`-backed data layer (no backend server).
 - `assets/js/gate.js` — public-site clearance-code gate shared by `index.html`, `archive.html`, and `record.html`.
 
 ## Public site access gate
 
-`archive.html` and `record.html` redirect to `index.html` unless a clearance code has been entered this session. The code is: **`CLEARANCE-04`**.
+`archive.html` and `record.html` redirect to `index.html` unless a clearance code has been entered this session. The code is: **********
 
 This is a client-side, thematic gate only (the code lives in `assets/js/gate.js`, visible to anyone who reads the page source) — it fits the ARG's "internal terminal" framing but is not real access control. To change the code, edit the `CODE` constant in `assets/js/gate.js`. The separate `admin/` panel has its own, unrelated passphrase (`OVERSEER-7`).
 
