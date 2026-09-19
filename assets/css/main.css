@@ -230,6 +230,42 @@ h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; color: v
   letter-spacing: 1px;
 }
 
+.clearance-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 280px;
+}
+.clearance-form label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--text-dim);
+}
+.clearance-form input {
+  width: 100%;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 11px;
+}
+.clearance-form input:focus {
+  outline: none;
+  border-color: var(--red);
+}
+.clearance-error {
+  min-height: 14px;
+  font-size: 11px;
+  color: var(--red-bright);
+  letter-spacing: 0.5px;
+}
+
 /* ---------- Panels / cards ---------- */
 .panel {
   background: var(--panel);
