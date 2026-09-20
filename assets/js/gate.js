@@ -8,7 +8,7 @@
   "use strict";
 
   var KEY = "dad_public_gate";
-  var CODE = "CLEARANCE-04";
+  var CODE = "REC/7F19/NULL-1156/RECOVER";
 
   function isCleared() {
     try { return global.sessionStorage.getItem(KEY) === "1"; } catch (e) { return false; }
