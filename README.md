@@ -30,14 +30,14 @@ then open `http://localhost:8080/index.html`.
 
 Opening the files directly via `file://` may prevent `IndexedDB` (used for uploaded video) from working consistently across pages — use a local server instead.
 
-## Deploying on Cloudflare Pages (with a custom domain)
+## Deploying on Cloudflare (with a custom domain)
 
-This is a static site (no build step), so Cloudflare Pages needs almost no configuration:
+This is a static site with no build step. The repo includes a `wrangler.toml` that tells Cloudflare to serve every file in the repo root as a static asset — this is required for a git-connected Cloudflare Workers/Pages build to succeed; without it, the build has nothing to deploy and fails.
 
-1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Pages → Connect to Git**, and select this repository.
-2. Framework preset: **None**. Build command: leave empty. Build output directory: `/` (repo root).
-3. Deploy. Cloudflare gives you a free `*.pages.dev` URL immediately.
-4. To use your own domain: open the new Pages project → **Custom domains → Set up a custom domain**, and enter your domain.
+1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Connect to Git**, and select this repository.
+2. Leave the build command empty — `wrangler.toml` already declares the site as static assets, so no framework preset or build output directory needs to be set manually.
+3. Deploy. Cloudflare gives you a free `*.workers.dev` (or `*.pages.dev`) URL immediately.
+4. To use your own domain: open the project → **Custom domains** (or **Triggers → Custom Domains** for a Worker) → **Set up a custom domain**, and enter your domain.
    - If the domain's nameservers already point to Cloudflare (i.e. the domain is already active in the same Cloudflare account), it attaches in a few seconds.
    - If not, Cloudflare will walk you through pointing the domain's nameservers to Cloudflare first, then attaching it.
 
