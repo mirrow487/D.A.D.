@@ -79,7 +79,7 @@
 
   function mountMedia(record, mediaContainer) {
     if (!record.media) {
-      mediaContainer.innerHTML = '<div class="media-block"><div class="media-empty">NO MEDIA LINKED TO THIS RECORD</div></div>';
+      mediaContainer.innerHTML = "";
       return;
     }
     mediaContainer.innerHTML =
