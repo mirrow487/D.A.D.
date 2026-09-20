@@ -18,7 +18,7 @@
       '<div class="topbar">' +
         '<div class="topbar-inner">' +
           '<a class="brand" href="/index.html">' +
-            '<span class="brand-mark">DAD</span>' +
+            '<span class="brand-mark">D.A.D.</span>' +
             '<span class="brand-text">' +
               '<span class="brand-title">D.A.D.</span>' +
               '<span class="brand-sub">DIGITAL ARCHIVE DEPARTMENT</span>' +

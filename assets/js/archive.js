@@ -14,6 +14,8 @@
     return record.status === "ACCESS DENIED" || record.classification === "ADMIN ONLY";
   }
 
+  var ADMIN_TRIGGER = "D4WN-OVERRIDE";
+
   function renderRows(records) {
     if (!records.length) {
       return '<tr><td colspan="6"><div class="records-empty">NO RECORDS MATCH CURRENT QUERY</div></td></tr>';
@@ -70,7 +72,13 @@
       });
     }
 
-    searchInput.addEventListener("input", render);
+    searchInput.addEventListener("input", function () {
+      if (searchInput.value.trim().toUpperCase() === ADMIN_TRIGGER) {
+        window.location.href = "/admin/index.html";
+        return;
+      }
+      render();
+    });
     clsSelect.addEventListener("change", render);
     render();
   }
