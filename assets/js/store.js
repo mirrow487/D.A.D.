@@ -38,7 +38,7 @@
       accessLog: [
         { date: "2019-02-11 09:00", user: "SYSTEM", action: "RECORD CREATED" },
         { date: "2021-06-04 14:22", user: "OPERATOR_01", action: "VIEWED" },
-        { date: "2024-11-03 08:15", user: "OPERATOR_04", action: "VIEWED" }
+        { date: "2021-08-01 08:15", user: "OPERATOR_04", action: "VIEWED" }
       ],
       hidden: false
     },
@@ -48,8 +48,8 @@
       title: "Prior Candidate — Closeout",
       classification: "CLASSIFIED",
       status: "REDACTED",
-      dateLogged: "2022-08-30",
-      dateRecorded: "2022-08-30",
+      dateLogged: "2020-02-15",
+      dateRecorded: "2020-02-15",
       operator: "[REDACTED]",
       tags: ["closeout", "prior-program"],
       summary: "█████████████████████████████████████████████████",
@@ -65,8 +65,8 @@
       ],
       media: null,
       accessLog: [
-        { date: "2022-08-30 00:00", user: "SYSTEM", action: "RECORD SEALED" },
-        { date: "2024-11-02 23:58", user: "OPERATOR_04", action: "VIEWED" }
+        { date: "2020-02-15 00:00", user: "SYSTEM", action: "RECORD SEALED" },
+        { date: "2021-07-31 23:58", user: "OPERATOR_04", action: "VIEWED" }
       ],
       hidden: false
     },
@@ -76,14 +76,14 @@
       title: "Candidate Pool — Batch 3",
       classification: "CLASSIFIED",
       status: "ARCHIVED",
-      dateLogged: "2024-09-17",
-      dateRecorded: "2024-09-17",
+      dateLogged: "2021-06-17",
+      dateRecorded: "2021-06-17",
       operator: "OPERATOR_02",
       tags: ["candidate-pool", "selection"],
       summary: "Shortlist of candidates evaluated for compatibility with test environment WORLD-TEST-01.",
       fields: [
         { label: "POOL SIZE", value: "██" },
-        { label: "SELECTION CRITERIA", value: "[REDACTED]" },
+        { label: "SELECTION CRITERIA", value: "[REDACTED] — SEE RECORD 1155" },
         { label: "FINAL SELECTION", value: "1 CANDIDATE" }
       ],
       body: [
@@ -92,13 +92,13 @@
         "████████ ████████ — DISQUALIFIED",
         "CARDB0ARD_D4WN — SELECTED",
         "████████████ — DISQUALIFIED (backup pool)",
-        "Rationale for selection withheld. See Record 1150 for pre-contact profile and Record 1151 for the flagging event that initiated this review."
+        "Rationale for selection withheld; standard criteria apply (see Record 1155). This pool was opened following the incident logged in Record 1151. See Record 1150 for the selected candidate's pre-contact profile."
       ],
       media: null,
       accessLog: [
-        { date: "2024-09-17 11:04", user: "OPERATOR_02", action: "RECORD CREATED" },
-        { date: "2024-09-18 09:41", user: "OPERATOR_04", action: "VIEWED" },
-        { date: "2024-11-01 19:12", user: "OPERATOR_04", action: "VIEWED" }
+        { date: "2021-06-17 11:04", user: "OPERATOR_02", action: "RECORD CREATED" },
+        { date: "2021-06-18 09:41", user: "OPERATOR_04", action: "VIEWED" },
+        { date: "2021-07-30 19:12", user: "OPERATOR_04", action: "VIEWED" }
       ],
       hidden: false
     },
@@ -108,59 +108,58 @@
       title: "Pre-Contact Profile",
       classification: "RESTRICTED",
       status: "ACTIVE",
-      dateLogged: "2024-09-20",
-      dateRecorded: "2024-09-20",
+      dateLogged: "2021-06-20",
+      dateRecorded: "2021-06-20",
       operator: "OPERATOR_02",
       tags: ["profile", "pre-contact", "surveillance"],
-      summary: "Compiled public activity profile assembled prior to initial contact. Subject was not made aware of this compilation.",
+      summary: "Compiled activity profile assembled prior to initial contact, confirming eligibility under standing selection criteria. Subject was not made aware of this compilation.",
       fields: [
-        { label: "PLATFORM", value: "MINECRAFT: JAVA EDITION" },
-        { label: "ACCOUNT AGE", value: "~3 YEARS" },
-        { label: "ACTIVITY PATTERN", value: "SOLO / SMALL SERVERS" },
+        { label: "PRIOR MINECRAFT EXPOSURE", value: "NONE — VERIFIED" },
+        { label: "GENERAL GAMING BACKGROUND", value: "MINIMAL" },
         { label: "SOCIAL EXPOSURE", value: "LOW" },
         { label: "SUITABILITY SCORE", value: "0.91" }
       ],
       body: [
-        "Subject exhibits low social exposure and infrequent public streaming activity, reducing likelihood of third-party observation during test window.",
-        "Subject has expressed, across public posts, a preference for exploration-focused and 'mystery' style content. This preference informed environment design (see WORLD-TEST-01 specification, withheld from this record).",
-        "Compilation of this profile began five days after an unprovisioned anomaly involving the subject was flagged for review (see Record 1151).",
+        "Subject exhibits low social media exposure and no public gaming history, reducing likelihood of third-party observation during test window and eliminating pattern-recognition risk from prior platform experience (see Record 1155, selection criteria).",
+        "Subject has expressed, across public posts unrelated to gaming, a preference for exploration-focused and 'mystery' style media. This preference informed environment design (see WORLD-TEST-01 specification, withheld from this record).",
+        "Compilation of this profile follows subject's selection from the Batch 3 candidate pool (see Record 1142).",
         "No indication subject is aware of this profile or its purpose."
       ],
       media: null,
       accessLog: [
-        { date: "2024-09-20 10:30", user: "OPERATOR_02", action: "RECORD CREATED" },
-        { date: "2024-11-03 08:16", user: "OPERATOR_04", action: "VIEWED" }
+        { date: "2021-06-20 10:30", user: "OPERATOR_02", action: "RECORD CREATED" },
+        { date: "2021-08-01 08:16", user: "OPERATOR_04", action: "VIEWED" }
       ],
       hidden: false
     },
     {
       id: "1151",
-      subject: "Cardb0ard_D4wn",
-      title: "First Contact — Disc Eleven (Unmonitored)",
+      subject: "[REDACTED]",
+      title: "Disc Eleven — Renewed Activity (Unmonitored)",
       classification: "CLASSIFIED",
       status: "ARCHIVED",
-      dateLogged: "2024-09-12",
-      dateRecorded: "2024-09-10",
+      dateLogged: "2021-06-14",
+      dateRecorded: "2021-06-12",
       operator: "SYSTEM",
-      tags: ["first-contact", "anomaly", "unmonitored", "trigger-event"],
-      summary: "Anomaly detected in an environment not provisioned by this department. Subject was not known to this department prior to this event.",
+      tags: ["anomaly", "unmonitored", "trigger-event"],
+      summary: "First confirmed disc activity since Record 1152, detected in an environment not provisioned by this department. Not connected to any active candidate at time of detection.",
       fields: [
         { label: "EVENT TYPE", value: "UNPROVISIONED ANOMALY" },
         { label: "DETECTION METHOD", value: "[REDACTED]" },
-        { label: "WORLD SOURCE", value: "SUBJECT-OWNED — NOT D.A.D. ISSUED" },
-        { label: "OUTCOME", value: "SUBJECT ADDED TO CANDIDATE POOL, SEE RECORD 1142" }
+        { label: "WORLD SOURCE", value: "THIRD-PARTY — NOT D.A.D. ISSUED" },
+        { label: "OUTCOME", value: "BATCH 3 CANDIDATE SEARCH INITIATED, SEE RECORD 1142" }
       ],
       body: [
-        "Subject, playing in a self-hosted environment with no departmental involvement, located a music disc and a jukebox structure. Neither item was placed by this department, and this department had no presence in this environment.",
-        "Subject played the disc for approximately 00:03:12 before it ceased to exist within the world's save data. No removal action was taken by the subject or any other player present. The jukebox itself was undamaged and remained in place.",
-        "Detection of this event did not occur through direct monitoring of the subject; this department had no record of the subject's existence prior to this event (see DETECTION METHOD, withheld).",
-        "Subject was added to the candidate pool for Batch 3 five days later. See Record 1142."
+        "An individual with no connection to this department's candidate pool, playing in a self-hosted environment, located a music disc and a jukebox structure. Neither item was placed by this department, and this department had no presence in this environment.",
+        "The disc played for approximately 00:03:12 before it ceased to exist within the world's save data. No removal action was taken by the individual or any other player present. The jukebox itself was undamaged and remained in place.",
+        "Detection of this event did not occur through direct monitoring; it was identified through [REDACTED]. This is the first confirmed disc activity logged since Record 1152.",
+        "This department initiated a new candidate search, Batch 3, five days later. See Record 1142."
       ],
       media: null,
       accessLog: [
-        { date: "2024-09-10 03:41", user: "SYSTEM", action: "ANOMALY AUTO-FLAGGED" },
-        { date: "2024-09-12 09:02", user: "OPERATOR_02", action: "RECORD CREATED" },
-        { date: "2024-11-03 08:10", user: "OPERATOR_04", action: "VIEWED" }
+        { date: "2021-06-12 03:41", user: "SYSTEM", action: "ANOMALY AUTO-FLAGGED" },
+        { date: "2021-06-14 09:02", user: "OPERATOR_02", action: "RECORD CREATED" },
+        { date: "2021-08-01 08:10", user: "OPERATOR_04", action: "VIEWED" }
       ],
       hidden: false
     },
@@ -190,7 +189,7 @@
       media: null,
       accessLog: [
         { date: "2021-03-02 00:00", user: "SYSTEM", action: "STATEMENT ARCHIVED" },
-        { date: "2024-11-03 08:11", user: "OPERATOR_04", action: "VIEWED — CROSS-REFERENCED WITH RECORD 1156" }
+        { date: "2021-08-01 08:11", user: "OPERATOR_04", action: "VIEWED — CROSS-REFERENCED WITH RECORD 1156" }
       ],
       hidden: false
     },
@@ -255,8 +254,8 @@
       title: "Selection Criteria — Retrieval Candidates",
       classification: "CLASSIFIED",
       status: "ACTIVE",
-      dateLogged: "2022-01-10",
-      dateRecorded: "2022-01-10",
+      dateLogged: "2019-05-01",
+      dateRecorded: "2019-05-01",
       operator: "[REDACTED]",
       tags: ["selection-criteria", "protocol", "candidates"],
       summary: "Standing criteria for selecting field candidates for disc retrieval assignments.",
@@ -274,8 +273,8 @@
       ],
       media: null,
       accessLog: [
-        { date: "2022-01-10 00:00", user: "SYSTEM", action: "PROTOCOL FILED" },
-        { date: "2024-09-17 10:40", user: "OPERATOR_02", action: "REFERENCED — SEE RECORD 1142" }
+        { date: "2019-05-01 00:00", user: "SYSTEM", action: "PROTOCOL FILED" },
+        { date: "2021-06-17 10:40", user: "OPERATOR_02", action: "REFERENCED — SEE RECORD 1142" }
       ],
       hidden: false
     },
@@ -285,14 +284,15 @@
       title: "First Encounter",
       classification: "RESTRICTED",
       status: "ACTIVE",
-      dateLogged: "2024-11-03",
-      dateRecorded: "2024-11-03",
+      dateLogged: "2021-08-01",
+      dateRecorded: "2021-08-01",
       operator: "D.A.D. — Field Unit 4",
       tags: ["baseline", "candidate-response", "world-test-01", "ingested-footage"],
       summary: "Automated capture of subject's initial session inside test environment WORLD-TEST-01. Subject shows no indication of awareness that the environment was modified prior to delivery.",
       fields: [
         { label: "DELIVERY METHOD", value: "[REDACTED]" },
         { label: "WORLD SEED ORIGIN", value: "[REDACTED]" },
+        { label: "CLIENT VERSION", value: "1.17.1" },
         { label: "SUBJECT AWARENESS", value: "NEGATIVE" },
         { label: "SESSION DURATION", value: "01:42:17" },
         { label: "CAPTURE METHOD", value: "AUTOMATIC — CLIENT-SIDE CAPTURE MODULE" },
@@ -312,12 +312,12 @@
       ],
       media: { status: "linked", caption: "Session capture — 01:42:17 — auto-ingested, unedited" },
       accessLog: [
-        { date: "2024-11-02 22:47", user: "SYSTEM", action: "PRE-STAGED — AWAITING SESSION START" },
-        { date: "2024-11-03 08:12", user: "SYSTEM", action: "CAPTURE INGESTED" },
-        { date: "2024-11-03 08:13", user: "SYSTEM", action: "AUDIO ANOMALY FLAGGED — DISC-11 DIVERGED TO ELEVEN AT 00:03:13" },
-        { date: "2024-11-03 08:13", user: "SYSTEM", action: "STRING LOGGED: \"RECORDING SYNCHRONIZED\" — SOURCE UNKNOWN" },
-        { date: "2024-11-03 08:15", user: "OPERATOR_04", action: "VIEWED" },
-        { date: "2024-11-03 08:19", user: "OPERATOR_04", action: "NOTE ADDED — see OP-NOTE-1163" }
+        { date: "2021-07-31 22:47", user: "SYSTEM", action: "PRE-STAGED — AWAITING SESSION START" },
+        { date: "2021-08-01 08:12", user: "SYSTEM", action: "CAPTURE INGESTED" },
+        { date: "2021-08-01 08:13", user: "SYSTEM", action: "AUDIO ANOMALY FLAGGED — DISC-11 DIVERGED TO ELEVEN AT 00:03:13" },
+        { date: "2021-08-01 08:13", user: "SYSTEM", action: "STRING LOGGED: \"RECORDING SYNCHRONIZED\" — SOURCE UNKNOWN" },
+        { date: "2021-08-01 08:15", user: "OPERATOR_04", action: "VIEWED" },
+        { date: "2021-08-01 08:19", user: "OPERATOR_04", action: "NOTE ADDED — see OP-NOTE-1163" }
       ],
       hidden: false
     },
@@ -327,8 +327,8 @@
       title: "Second Session",
       classification: "RESTRICTED",
       status: "CORRUPTED",
-      dateLogged: "2024-11-09",
-      dateRecorded: "2024-11-09",
+      dateLogged: "2021-08-07",
+      dateRecorded: "2021-08-07",
       operator: "D.A.D. — Field Unit 4",
       tags: ["candidate-response", "world-test-01", "corrupted"],
       summary: "[PARTIAL RECOVERY] Capture file sustained damage during transfer. Recovered segments attached below.",
@@ -345,9 +345,9 @@
       ],
       media: null,
       accessLog: [
-        { date: "2024-11-09 07:58", user: "SYSTEM", action: "CAPTURE INGESTED — INTEGRITY CHECK FAILED" },
-        { date: "2024-11-09 08:40", user: "OPERATOR_04", action: "VIEWED" },
-        { date: "2024-11-09 08:41", user: "OPERATOR_04", action: "RECOVERY ATTEMPTED" }
+        { date: "2021-08-07 07:58", user: "SYSTEM", action: "CAPTURE INGESTED — INTEGRITY CHECK FAILED" },
+        { date: "2021-08-07 08:40", user: "OPERATOR_04", action: "VIEWED" },
+        { date: "2021-08-07 08:41", user: "OPERATOR_04", action: "RECOVERY ATTEMPTED" }
       ],
       hidden: false
     },
@@ -357,8 +357,8 @@
       title: "Assignment Directive — Full-Set Retrieval",
       classification: "CLASSIFIED",
       status: "ACTIVE",
-      dateLogged: "2024-11-10",
-      dateRecorded: "2024-11-10",
+      dateLogged: "2021-08-08",
+      dateRecorded: "2021-08-08",
       operator: "[REDACTED]",
       tags: ["assignment", "full-set", "deviation-precursor"],
       summary: "Directive escalating subject's assignment scope beyond standard single-disc retrieval.",
@@ -376,9 +376,9 @@
       ],
       media: null,
       accessLog: [
-        { date: "2024-11-10 17:20", user: "[REDACTED]", action: "DIRECTIVE ISSUED" },
-        { date: "2024-11-10 17:45", user: "OPERATOR_04", action: "VIEWED" },
-        { date: "2024-11-12 12:00", user: "SYSTEM", action: "SEE RECORD 1161 — SEALED SAME DAY" }
+        { date: "2021-08-08 17:20", user: "[REDACTED]", action: "DIRECTIVE ISSUED" },
+        { date: "2021-08-08 17:45", user: "OPERATOR_04", action: "VIEWED" },
+        { date: "2021-08-10 12:00", user: "SYSTEM", action: "SEE RECORD 1161 — SEALED SAME DAY" }
       ],
       hidden: false
     },
@@ -388,8 +388,8 @@
       title: "Deviation Report",
       classification: "ADMIN ONLY",
       status: "ACCESS DENIED",
-      dateLogged: "2024-11-12",
-      dateRecorded: "2024-11-12",
+      dateLogged: "2021-08-10",
+      dateRecorded: "2021-08-10",
       operator: "[REDACTED]",
       tags: ["deviation", "restricted"],
       summary: null,
@@ -397,7 +397,7 @@
       body: [],
       media: null,
       accessLog: [
-        { date: "2024-11-12 12:00", user: "SYSTEM", action: "RECORD SEALED — ADMIN CLEARANCE REQUIRED" }
+        { date: "2021-08-10 12:00", user: "SYSTEM", action: "RECORD SEALED — ADMIN CLEARANCE REQUIRED" }
       ],
       hidden: false
     },
@@ -407,8 +407,8 @@
       title: "Operator Notes — Unofficial",
       classification: "UNLOGGED",
       status: "UNOFFICIAL",
-      dateLogged: "2024-11-03",
-      dateRecorded: "2024-11-03",
+      dateLogged: "2021-08-01",
+      dateRecorded: "2021-08-01",
       operator: "OPERATOR_04",
       tags: ["personal", "unofficial", "not-for-file"],
       summary: "Personal note, not part of the formal record. Retained by mistake during archive migration.",
@@ -423,8 +423,8 @@
       ],
       media: null,
       accessLog: [
-        { date: "2024-11-03 08:19", user: "OPERATOR_04", action: "CREATED — PERSONAL DRAFT" },
-        { date: "2024-11-04 02:03", user: "OPERATOR_04", action: "MODIFIED" }
+        { date: "2021-08-01 08:19", user: "OPERATOR_04", action: "CREATED — PERSONAL DRAFT" },
+        { date: "2021-08-02 02:03", user: "OPERATOR_04", action: "MODIFIED" }
       ],
       hidden: true
     }
