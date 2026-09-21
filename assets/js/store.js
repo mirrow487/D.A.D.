@@ -38,7 +38,7 @@
       accessLog: [
         { date: "2019-02-11 09:00", user: "SYSTEM", action: "RECORD CREATED" },
         { date: "2021-06-04 14:22", user: "OPERATOR_01", action: "VIEWED" },
-        { date: "2024-11-03 08:15", user: "OPERATOR_04", action: "VIEWED" }
+        { date: "2021-08-01 08:15", user: "OPERATOR_04", action: "VIEWED" }
       ],
       hidden: false
     },
@@ -48,8 +48,8 @@
       title: "Prior Candidate — Closeout",
       classification: "CLASSIFIED",
       status: "REDACTED",
-      dateLogged: "2022-08-30",
-      dateRecorded: "2022-08-30",
+      dateLogged: "2020-02-15",
+      dateRecorded: "2020-02-15",
       operator: "[REDACTED]",
       tags: ["closeout", "prior-program"],
       summary: "█████████████████████████████████████████████████",
@@ -65,8 +65,8 @@
       ],
       media: null,
       accessLog: [
-        { date: "2022-08-30 00:00", user: "SYSTEM", action: "RECORD SEALED" },
-        { date: "2024-11-02 23:58", user: "OPERATOR_04", action: "VIEWED" }
+        { date: "2020-02-15 00:00", user: "SYSTEM", action: "RECORD SEALED" },
+        { date: "2021-07-31 23:58", user: "OPERATOR_04", action: "VIEWED" }
       ],
       hidden: false
     },
@@ -76,14 +76,14 @@
       title: "Candidate Pool — Batch 3",
       classification: "CLASSIFIED",
       status: "ARCHIVED",
-      dateLogged: "2024-09-17",
-      dateRecorded: "2024-09-17",
+      dateLogged: "2021-06-17",
+      dateRecorded: "2021-06-17",
       operator: "OPERATOR_02",
       tags: ["candidate-pool", "selection"],
       summary: "Shortlist of candidates evaluated for compatibility with test environment WORLD-TEST-01.",
       fields: [
         { label: "POOL SIZE", value: "██" },
-        { label: "SELECTION CRITERIA", value: "[REDACTED]" },
+        { label: "SELECTION CRITERIA", value: "[REDACTED] — SEE RECORD 1155" },
         { label: "FINAL SELECTION", value: "1 CANDIDATE" }
       ],
       body: [
@@ -92,13 +92,13 @@
         "████████ ████████ — DISQUALIFIED",
         "CARDB0ARD_D4WN — SELECTED",
         "████████████ — DISQUALIFIED (backup pool)",
-        "Rationale for selection withheld. See Record 1150 for pre-contact profile."
+        "Rationale for selection withheld; standard criteria apply (see Record 1155). This pool was opened following the incident logged in Record 1151. See Record 1150 for the selected candidate's pre-contact profile."
       ],
       media: null,
       accessLog: [
-        { date: "2024-09-17 11:04", user: "OPERATOR_02", action: "RECORD CREATED" },
-        { date: "2024-09-18 09:41", user: "OPERATOR_04", action: "VIEWED" },
-        { date: "2024-11-01 19:12", user: "OPERATOR_04", action: "VIEWED" }
+        { date: "2021-06-17 11:04", user: "OPERATOR_02", action: "RECORD CREATED" },
+        { date: "2021-06-18 09:41", user: "OPERATOR_04", action: "VIEWED" },
+        { date: "2021-07-30 19:12", user: "OPERATOR_04", action: "VIEWED" }
       ],
       hidden: false
     },
@@ -108,27 +108,173 @@
       title: "Pre-Contact Profile",
       classification: "RESTRICTED",
       status: "ACTIVE",
-      dateLogged: "2024-09-20",
-      dateRecorded: "2024-09-20",
+      dateLogged: "2021-06-20",
+      dateRecorded: "2021-06-20",
       operator: "OPERATOR_02",
       tags: ["profile", "pre-contact", "surveillance"],
-      summary: "Compiled public activity profile assembled prior to initial contact. Subject was not made aware of this compilation.",
+      summary: "Compiled activity profile assembled prior to initial contact, confirming eligibility under standing selection criteria. Subject was not made aware of this compilation.",
       fields: [
-        { label: "PLATFORM", value: "MINECRAFT: JAVA EDITION" },
-        { label: "ACCOUNT AGE", value: "~3 YEARS" },
-        { label: "ACTIVITY PATTERN", value: "SOLO / SMALL SERVERS" },
+        { label: "PRIOR MINECRAFT EXPOSURE", value: "NONE — VERIFIED" },
+        { label: "GENERAL GAMING BACKGROUND", value: "MINIMAL" },
         { label: "SOCIAL EXPOSURE", value: "LOW" },
         { label: "SUITABILITY SCORE", value: "0.91" }
       ],
       body: [
-        "Subject exhibits low social exposure and infrequent public streaming activity, reducing likelihood of third-party observation during test window.",
-        "Subject has expressed, across public posts, a preference for exploration-focused and 'mystery' style content. This preference informed environment design (see WORLD-TEST-01 specification, withheld from this record).",
+        "Subject exhibits low social media exposure and no public gaming history, reducing likelihood of third-party observation during test window and eliminating pattern-recognition risk from prior platform experience (see Record 1155, selection criteria).",
+        "Subject has expressed, across public posts unrelated to gaming, a preference for exploration-focused and 'mystery' style media. This preference informed environment design (see WORLD-TEST-01 specification, withheld from this record).",
+        "Compilation of this profile follows subject's selection from the Batch 3 candidate pool (see Record 1142).",
         "No indication subject is aware of this profile or its purpose."
       ],
       media: null,
       accessLog: [
-        { date: "2024-09-20 10:30", user: "OPERATOR_02", action: "RECORD CREATED" },
-        { date: "2024-11-03 08:16", user: "OPERATOR_04", action: "VIEWED" }
+        { date: "2021-06-20 10:30", user: "OPERATOR_02", action: "RECORD CREATED" },
+        { date: "2021-08-01 08:16", user: "OPERATOR_04", action: "VIEWED" }
+      ],
+      hidden: false
+    },
+    {
+      id: "1151",
+      subject: "[REDACTED]",
+      title: "Disc Eleven — Renewed Activity (Unmonitored)",
+      classification: "CLASSIFIED",
+      status: "ARCHIVED",
+      dateLogged: "2021-06-14",
+      dateRecorded: "2021-06-12",
+      operator: "SYSTEM",
+      tags: ["anomaly", "unmonitored", "trigger-event"],
+      summary: "First confirmed disc activity since Record 1152, detected in an environment not provisioned by this department. Not connected to any active candidate at time of detection.",
+      fields: [
+        { label: "EVENT TYPE", value: "UNPROVISIONED ANOMALY" },
+        { label: "DETECTION METHOD", value: "[REDACTED]" },
+        { label: "WORLD SOURCE", value: "THIRD-PARTY — NOT D.A.D. ISSUED" },
+        { label: "OUTCOME", value: "BATCH 3 CANDIDATE SEARCH INITIATED, SEE RECORD 1142" }
+      ],
+      body: [
+        "An individual with no connection to this department's candidate pool, playing in a self-hosted environment, located a music disc and a jukebox structure. Neither item was placed by this department, and this department had no presence in this environment.",
+        "The disc played for approximately 00:03:12 before it ceased to exist within the world's save data. No removal action was taken by the individual or any other player present. The jukebox itself was undamaged and remained in place.",
+        "Detection of this event did not occur through direct monitoring; it was identified through [REDACTED]. This is the first confirmed disc activity logged since Record 1152.",
+        "This department initiated a new candidate search, Batch 3, five days later. See Record 1142."
+      ],
+      media: null,
+      accessLog: [
+        { date: "2021-06-12 03:41", user: "SYSTEM", action: "ANOMALY AUTO-FLAGGED" },
+        { date: "2021-06-14 09:02", user: "OPERATOR_02", action: "RECORD CREATED" },
+        { date: "2021-08-01 08:10", user: "OPERATOR_04", action: "VIEWED" }
+      ],
+      hidden: false
+    },
+    {
+      id: "1152",
+      subject: "[REDACTED]",
+      title: "Disc Eleven — Recovered Statement",
+      classification: "CLASSIFIED",
+      status: "CORRUPTED",
+      dateLogged: "2021-03-02",
+      dateRecorded: "2021-03-02",
+      operator: "[REDACTED]",
+      tags: ["disc-eleven", "recovered-audio", "source-statement"],
+      summary: "[PARTIAL RECOVERY] Transcript recovered from a statement given by the individual credited with the first documented recording of the track catalogued as DISC-11.",
+      fields: [
+        { label: "SOURCE", value: "AUDIO STATEMENT (TRANSCRIBED)" },
+        { label: "SUBJECT STATUS", value: "[REDACTED]" },
+        { label: "RECOVERY", value: "PARTIAL — 18%" }
+      ],
+      body: [
+        "...I wasn't trying to record over it, I just wanted to hear it again, and it—",
+        "██████████████████████████████████████████████████████",
+        "...it isn't a sound. It's not supposed to be a sound. If you play it all the way through, you—",
+        "██████████████████████████████████████████████████████",
+        "I've stopped calling it eleven. I don't think that's what it's called where it comes from."
+      ],
+      media: null,
+      accessLog: [
+        { date: "2021-03-02 00:00", user: "SYSTEM", action: "STATEMENT ARCHIVED" },
+        { date: "2021-08-01 08:11", user: "OPERATOR_04", action: "VIEWED — CROSS-REFERENCED WITH RECORD 1156" }
+      ],
+      hidden: false
+    },
+    {
+      id: "1153",
+      subject: "N/A",
+      title: "Disc Twelve — Withdrawal Notice",
+      classification: "CLASSIFIED",
+      status: "ARCHIVED",
+      dateLogged: "2020-11-01",
+      dateRecorded: "2020-11-01",
+      operator: "[REDACTED]",
+      tags: ["disc-twelve", "withdrawal", "distribution"],
+      summary: "Administrative notice — track withdrawn from circulation.",
+      fields: [
+        { label: "ACTION", value: "WITHDRAWAL" },
+        { label: "SCOPE", value: "ALL KNOWN DISTRIBUTION CHANNELS" },
+        { label: "REASON", value: "[REDACTED]" }
+      ],
+      body: [
+        "Track catalogued as DISC-12 is to be withdrawn from all distributed builds effective immediately.",
+        "Field copies located during retrieval operations are to be purged on discovery, not archived.",
+        "████████████████████████████████████████████████████████",
+        "This notice supersedes all prior guidance regarding DISC-12. Questions should be directed to [REDACTED]."
+      ],
+      media: null,
+      accessLog: [
+        { date: "2020-11-01 00:00", user: "SYSTEM", action: "NOTICE ISSUED" }
+      ],
+      hidden: false
+    },
+    {
+      id: "1154",
+      subject: "N/A",
+      title: "Disc Thirteen — Substitution Log",
+      classification: "CLASSIFIED",
+      status: "ARCHIVED",
+      dateLogged: "2020-11-02",
+      dateRecorded: "2020-11-02",
+      operator: "[REDACTED]",
+      tags: ["disc-thirteen", "substitution"],
+      summary: "Original composition replaced with an alternate track prior to redistribution.",
+      fields: [
+        { label: "ACTION", value: "SUBSTITUTION" },
+        { label: "ORIGINAL TRACK", value: "[REDACTED]" },
+        { label: "REPLACEMENT TRACK", value: "COMMISSIONED — SEE ASSET 13-B" }
+      ],
+      body: [
+        "Original track catalogued as DISC-13 has been replaced with an alternate composition in all builds distributed after this date.",
+        "Subjects exposed to both versions report no perceptual discrepancy unless directly comparing the replacement against an archived reference recording.",
+        "No further action required unless a subject requests the original by name. See escalation protocol 4."
+      ],
+      media: null,
+      accessLog: [
+        { date: "2020-11-02 00:00", user: "SYSTEM", action: "LOG CREATED" }
+      ],
+      hidden: false
+    },
+    {
+      id: "1155",
+      subject: "N/A",
+      title: "Selection Criteria — Retrieval Candidates",
+      classification: "CLASSIFIED",
+      status: "ACTIVE",
+      dateLogged: "2019-05-01",
+      dateRecorded: "2019-05-01",
+      operator: "[REDACTED]",
+      tags: ["selection-criteria", "protocol", "candidates"],
+      summary: "Standing criteria for selecting field candidates for disc retrieval assignments.",
+      fields: [
+        { label: "PRIMARY CRITERION", value: "ZERO VERIFIED PRIOR EXPOSURE TO TARGET PLATFORM" },
+        { label: "DELIVERY DIFFICULTY", value: "PEACEFUL — NO HOSTILE ENTITY INTERFERENCE" },
+        { label: "STARTER PROVISION", value: "STANDARD KIT — SEE APPENDIX" },
+        { label: "EXCLUSION", value: "EXPERIENCED PLAYERS, STREAMERS, COMMUNITY-AFFILIATED ACCOUNTS" }
+      ],
+      body: [
+        "Candidates with prior experience on the target platform are excluded from retrieval assignments. Experienced users consistently identify pre-placed content and world modifications within the first session, compromising the assignment.",
+        "Preferred candidates have no verified account history prior to selection. Naive users attribute anomalies to personal error or coincidence rather than external modification, extending the usable window of an assignment.",
+        "Standard delivery protocol sets the environment to peaceful difficulty to remove hostile-entity interference as a variable, and provisions a starter kit to minimize time spent on unrelated survival tasks before the subject reaches planted content.",
+        "This protocol has been in effect since [REDACTED] and has not required revision."
+      ],
+      media: null,
+      accessLog: [
+        { date: "2019-05-01 00:00", user: "SYSTEM", action: "PROTOCOL FILED" },
+        { date: "2021-06-17 10:40", user: "OPERATOR_02", action: "REFERENCED — SEE RECORD 1142" }
       ],
       hidden: false
     },
@@ -138,31 +284,40 @@
       title: "First Encounter",
       classification: "RESTRICTED",
       status: "ACTIVE",
-      dateLogged: "2024-11-03",
-      dateRecorded: "2024-11-03",
+      dateLogged: "2021-08-01",
+      dateRecorded: "2021-08-01",
       operator: "D.A.D. — Field Unit 4",
       tags: ["baseline", "candidate-response", "world-test-01", "ingested-footage"],
       summary: "Automated capture of subject's initial session inside test environment WORLD-TEST-01. Subject shows no indication of awareness that the environment was modified prior to delivery.",
       fields: [
         { label: "DELIVERY METHOD", value: "[REDACTED]" },
         { label: "WORLD SEED ORIGIN", value: "[REDACTED]" },
+        { label: "CLIENT VERSION", value: "1.17.1" },
         { label: "SUBJECT AWARENESS", value: "NEGATIVE" },
         { label: "SESSION DURATION", value: "01:42:17" },
         { label: "CAPTURE METHOD", value: "AUTOMATIC — CLIENT-SIDE CAPTURE MODULE" },
-        { label: "RELATED RECORDS", value: "1142, 1150, 1157" }
+        { label: "AUDIO ANOMALY", value: "UNRESOLVED — SEE BODY" },
+        { label: "DISC STATUS", value: "DESTROYED (JUKEBOX BROKEN BY SUBJECT, 00:04:01)" },
+        { label: "SUBJECT MEMORY OF EVENT", value: "NEGATIVE (queried informally in later session)" },
+        { label: "RELATED RECORDS", value: "1142, 1150, 1151, 1155, 1157, 1158" }
       ],
       body: [
         "Subject received the prepared world through a channel indistinguishable, from the subject's perspective, from an ordinary file transfer. No confirmation of receipt was requested or given.",
-        "Session capture began automatically upon world load. Subject proceeded to explore the immediate spawn area for approximately eleven minutes before locating the first placed structure.",
-        "Subject's reaction upon locating the structure has been flagged for behavioral review (see OP-NOTE-1163, access restricted).",
-        "No corrective action was necessary during this session. Environment integrity held for full duration."
+        "Session capture began automatically upon world load. Subject proceeded to explore the immediate spawn area for approximately eleven minutes before locating a pre-placed jukebox and a single music disc, neither of which the subject had brought into the world (see WORLD-TEST-01 build manifest, withheld from this record).",
+        "Subject inserted the disc without hesitation and activated the jukebox. Playback matched the reference waveform logged for DISC-11 for the first 00:03:12 of runtime.",
+        "At 00:03:13, output diverged from the DISC-11 reference and began matching an unlisted track internally logged as ELEVEN. Subject paused and reopened chat; the subject's own chat log shows no message sent at this timestamp. The session overlay recorded the string RECORDING SYNCHRONIZED at the same timestamp. This string could not be attributed to the client, the disc file, or any operator action (see access log).",
+        "Track volume increased over the following seconds with no corresponding change to any in-game or client setting. At 00:04:01, subject struck the jukebox, destroying it and ending playback. Subject did not attempt to recover the disc.",
+        "Subject's reaction upon locating the jukebox has been flagged for behavioral review (see OP-NOTE-1163, access restricted).",
+        "No corrective action was necessary during this session. Environment integrity held for full duration. The anomalous audio segment has been retained for analysis; see AUDIO ANOMALY."
       ],
       media: { status: "linked", caption: "Session capture — 01:42:17 — auto-ingested, unedited" },
       accessLog: [
-        { date: "2024-11-02 22:47", user: "SYSTEM", action: "PRE-STAGED — AWAITING SESSION START" },
-        { date: "2024-11-03 08:12", user: "SYSTEM", action: "CAPTURE INGESTED" },
-        { date: "2024-11-03 08:15", user: "OPERATOR_04", action: "VIEWED" },
-        { date: "2024-11-03 08:19", user: "OPERATOR_04", action: "NOTE ADDED — see OP-NOTE-1163" }
+        { date: "2021-07-31 22:47", user: "SYSTEM", action: "PRE-STAGED — AWAITING SESSION START" },
+        { date: "2021-08-01 08:12", user: "SYSTEM", action: "CAPTURE INGESTED" },
+        { date: "2021-08-01 08:13", user: "SYSTEM", action: "AUDIO ANOMALY FLAGGED — DISC-11 DIVERGED TO ELEVEN AT 00:03:13" },
+        { date: "2021-08-01 08:13", user: "SYSTEM", action: "STRING LOGGED: \"RECORDING SYNCHRONIZED\" — SOURCE UNKNOWN" },
+        { date: "2021-08-01 08:15", user: "OPERATOR_04", action: "VIEWED" },
+        { date: "2021-08-01 08:19", user: "OPERATOR_04", action: "NOTE ADDED — see OP-NOTE-1163" }
       ],
       hidden: false
     },
@@ -172,8 +327,8 @@
       title: "Second Session",
       classification: "RESTRICTED",
       status: "CORRUPTED",
-      dateLogged: "2024-11-09",
-      dateRecorded: "2024-11-09",
+      dateLogged: "2021-08-07",
+      dateRecorded: "2021-08-07",
       operator: "D.A.D. — Field Unit 4",
       tags: ["candidate-response", "world-test-01", "corrupted"],
       summary: "[PARTIAL RECOVERY] Capture file sustained damage during transfer. Recovered segments attached below.",
@@ -183,16 +338,47 @@
         { label: "CAPTURE METHOD", value: "AUTOMATIC — CLIENT-SIDE CAPTURE MODULE" }
       ],
       body: [
-        "[RECOVERED FRAGMENT 1] ...returned to the same coordinates without being directed to. Subject appears to be comparing the structure to something, possibly a screenshot taken outside the sess—",
+        "[RECOVERED FRAGMENT 1] ...returned to the same coordinates without being directed to. A jukebox stood at the site again, though subject destroyed the original in the prior session and did not rebuild it. Subject appears to be comparing the structure to something, possibly a screenshot taken outside the sess—",
         "[SEGMENT UNREADABLE — 00:14:02 to 00:51:40]",
         "[RECOVERED FRAGMENT 2] ...began to suspect something was placed rather than generated. Subject said, aloud, \"this isn't natural,\" then quit without saving chat log. Recommend rev",
         "[FILE TRUNCATED]"
       ],
       media: null,
       accessLog: [
-        { date: "2024-11-09 07:58", user: "SYSTEM", action: "CAPTURE INGESTED — INTEGRITY CHECK FAILED" },
-        { date: "2024-11-09 08:40", user: "OPERATOR_04", action: "VIEWED" },
-        { date: "2024-11-09 08:41", user: "OPERATOR_04", action: "RECOVERY ATTEMPTED" }
+        { date: "2021-08-07 07:58", user: "SYSTEM", action: "CAPTURE INGESTED — INTEGRITY CHECK FAILED" },
+        { date: "2021-08-07 08:40", user: "OPERATOR_04", action: "VIEWED" },
+        { date: "2021-08-07 08:41", user: "OPERATOR_04", action: "RECOVERY ATTEMPTED" }
+      ],
+      hidden: false
+    },
+    {
+      id: "1158",
+      subject: "Cardb0ard_D4wn",
+      title: "Assignment Directive — Full-Set Retrieval",
+      classification: "CLASSIFIED",
+      status: "ACTIVE",
+      dateLogged: "2021-08-08",
+      dateRecorded: "2021-08-08",
+      operator: "[REDACTED]",
+      tags: ["assignment", "full-set", "deviation-precursor"],
+      summary: "Directive escalating subject's assignment scope beyond standard single-disc retrieval.",
+      fields: [
+        { label: "PRIOR SCOPE", value: "SINGLE-DISC RETRIEVAL (STANDARD)" },
+        { label: "REVISED SCOPE", value: "FULL-SET RETRIEVAL — DISC 11 THROUGH DISC 13 INCLUSIVE" },
+        { label: "AUTHORIZATION", value: "[REDACTED]" },
+        { label: "RATIONALE", value: "SEE RECORD 1161 — ACCESS RESTRICTED" }
+      ],
+      body: [
+        "Standard protocol limits a single candidate's assignment to one disc (see Record 1155). This directive revises subject Cardb0ard_D4wn's assignment to cover the complete numbered set.",
+        "No other active candidate has been assigned full-set scope at this time.",
+        "Field units are reminded that this deviation from standard protocol is not to be discussed with the subject under any circumstance.",
+        "Full rationale for this directive is restricted; see Record 1161."
+      ],
+      media: null,
+      accessLog: [
+        { date: "2021-08-08 17:20", user: "[REDACTED]", action: "DIRECTIVE ISSUED" },
+        { date: "2021-08-08 17:45", user: "OPERATOR_04", action: "VIEWED" },
+        { date: "2021-08-10 12:00", user: "SYSTEM", action: "SEE RECORD 1161 — SEALED SAME DAY" }
       ],
       hidden: false
     },
@@ -202,8 +388,8 @@
       title: "Deviation Report",
       classification: "ADMIN ONLY",
       status: "ACCESS DENIED",
-      dateLogged: "2024-11-12",
-      dateRecorded: "2024-11-12",
+      dateLogged: "2021-08-10",
+      dateRecorded: "2021-08-10",
       operator: "[REDACTED]",
       tags: ["deviation", "restricted"],
       summary: null,
@@ -211,7 +397,7 @@
       body: [],
       media: null,
       accessLog: [
-        { date: "2024-11-12 12:00", user: "SYSTEM", action: "RECORD SEALED — ADMIN CLEARANCE REQUIRED" }
+        { date: "2021-08-10 12:00", user: "SYSTEM", action: "RECORD SEALED — ADMIN CLEARANCE REQUIRED" }
       ],
       hidden: false
     },
@@ -221,8 +407,8 @@
       title: "Operator Notes — Unofficial",
       classification: "UNLOGGED",
       status: "UNOFFICIAL",
-      dateLogged: "2024-11-03",
-      dateRecorded: "2024-11-03",
+      dateLogged: "2021-08-01",
+      dateRecorded: "2021-08-01",
       operator: "OPERATOR_04",
       tags: ["personal", "unofficial", "not-for-file"],
       summary: "Personal note, not part of the formal record. Retained by mistake during archive migration.",
@@ -231,13 +417,14 @@
       ],
       body: [
         "He said 'thank you' out loud when he found the second structure. Not to anyone in the game. Just said it, to the room.",
+        "The chat log said 'RECORDING SYNCHRONIZED.' Nobody on this team typed that. I checked twice, then I stopped checking because I didn't want an answer.",
         "I keep telling myself this is a baseline session like any other. I don't fully believe that anymore.",
         "Deleting this from my drafts folder. Not deleting it from here yet."
       ],
       media: null,
       accessLog: [
-        { date: "2024-11-03 08:19", user: "OPERATOR_04", action: "CREATED — PERSONAL DRAFT" },
-        { date: "2024-11-04 02:03", user: "OPERATOR_04", action: "MODIFIED" }
+        { date: "2021-08-01 08:19", user: "OPERATOR_04", action: "CREATED — PERSONAL DRAFT" },
+        { date: "2021-08-02 02:03", user: "OPERATOR_04", action: "MODIFIED" }
       ],
       hidden: true
     }
